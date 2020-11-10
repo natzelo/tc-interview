@@ -4,6 +4,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
 import Hero from "./components/Hero";
+import Charts from "./components/Charts";
 import Features from "./components/Features";
 import Services from "./components/Services";
 import WeDo from "./components/WeDo";
@@ -26,6 +27,7 @@ function App() {
       <Navbar toggle={toggle} />
       <Hero />
       <Features />
+      <Charts />
       <Services />
       <WeDo />
       <Gallery />

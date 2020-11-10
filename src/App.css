@@ -422,6 +422,54 @@ body {
   transition: all 0.5s;
 }
 
+.i1 {
+  background-image: url("./images/i1.jpg");
+}
+
+.i2 {
+  background-image: url("./images/i2.jpg");
+}
+
+.i3 {
+  background-image: url("./images/i3.jpg");
+}
+
+.i4 {
+  background-image: url("./images/i4.jpg");
+}
+
+.i5 {
+  background-image: url("./images/i5.jpg");
+}
+
+.i6 {
+  background-image: url("./images/i6.jpg");
+}
+
+.i7 {
+  background-image: url("./images/i7.jpg");
+}
+
+.i8 {
+  background-image: url("./images/i8.jpg");
+}
+
+.i9 {
+  background-image: url("./images/i9.jpg");
+}
+
+.i10 {
+  background-image: url("./images/i10.jpg");
+}
+
+.i11 {
+  background-image: url("./images/i11.jpg");
+}
+
+.i12 {
+  background-image: url("./images/i12.jpg");
+}
+
 .insta-parent:hover .insta-child {
   transform: scale(1.2);
 }
@@ -439,4 +487,34 @@ body {
 
 .fab {
   padding: 10px;
+}
+
+.charts {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 10%;
+  background-image: url("./images/chart.jpg");
+  background-position: center;
+}
+
+.bar-chart-wrapper {
+  padding: 50px;
+  width: 50%;
+}
+
+.charts h3 {
+  font-size: 2rem;
+}
+
+@media (max-width: 500px) {
+  .charts {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .bar-chart-wrapper {
+    padding: 10px 0;
+    width: 100%;
+  }
 }
