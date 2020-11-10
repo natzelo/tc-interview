@@ -4,6 +4,25 @@ body {
   font-family: "Poppins", sans-serif !important;
 }
 
+@keyframes slide-in {
+  from {
+    transform: translateX(-1000px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes drop-in {
+  from {
+    transform: translateY(-300px);
+  }
+
+  to {
+    transform: translateY(0);
+  }
+}
+
 .hero {
   background-image: url("./images/herobg.png");
   background-repeat: no-repeat;
@@ -18,9 +37,11 @@ body {
 
 .hero-img-wrapper img {
   width: 90%;
+  animation: slide-in 2s;
 }
 
 .hero .text-wrapper {
+  animation: drop-in 2s;
   padding: 0 5%;
 }
 
@@ -122,8 +143,7 @@ body {
   position: relative;
   width: 300px;
   height: 300px;
-
-  object-fit: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -137,6 +157,7 @@ body {
 }
 
 .p2 {
+  transform: translateY(30px);
   background-image: linear-gradient(
       rgba(98, 77, 218, 0.45),
       rgba(98, 77, 218, 0.45)
@@ -153,6 +174,7 @@ body {
 }
 
 .p4 {
+  transform: translateY(30px);
   background-image: linear-gradient(
       rgba(29, 204, 13, 0.45),
       rgba(29, 204, 13, 0.45)
@@ -220,6 +242,10 @@ body {
 }
 
 @media (max-width: 700px) {
+  .p2,
+  .p4 {
+    transform: translateY(0);
+  }
   .people {
     display: flex;
     flex-direction: column;
@@ -244,6 +270,12 @@ body {
 
 .we-do-highlight {
   color: #ffb5d7;
+}
+
+@media (max-width: 500px) {
+  .we-do {
+    font-size: 2rem;
+  }
 }
 
 .gallary-card {
