@@ -1,24 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router } from "react-router-dom";
+import { useState } from "react";
+import "./App.css";
+import Navbar from "./components/Navbar";
+import Sidebar from "./components/Sidebar";
+import Hero from "./components/Hero";
+import Features from "./components/Features";
+import Services from "./components/Services";
+import WeDo from "./components/WeDo";
+import Gallery from "./components/Gallery";
+import Invitation from "./components/Invitation";
+import Contact from "./components/Contact";
+import Instagram from "./components/Instagram";
+import Footer from "./components/Footer";
 
 function App() {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggle = () => {
+    setIsOpen(!isOpen);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Sidebar isOpen={isOpen} toggle={toggle} />
+      <Navbar toggle={toggle} />
+      <Hero />
+      <Features />
+      <Services />
+      <WeDo />
+      <Gallery />
+      <Invitation />
+      <Contact />
+      <Instagram />
+      <Footer />
+    </Router>
   );
 }
 
